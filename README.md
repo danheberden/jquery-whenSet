@@ -16,3 +16,5 @@ For example:
 It has `doneEach`, `failEach`, `alwaysEach`, `pipeEach` as well as
 putting the arguments onto the promise, like [0] => arg1, [1] => arg2,
 etc. 
+
+Here's  a demo: http://jsfiddle.net/danheberden/YRB4P/
