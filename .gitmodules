@@ -1,0 +1,6 @@
+[submodule "libs/underscore.Deferred"]
+	path = libs/underscore.Deferred
+	url = https://github.com/wookiehangover/underscore.Deferred.git
+[submodule "libs/underscore"]
+	path = libs/underscore
+	url = http://github.com/documentcloud/underscore

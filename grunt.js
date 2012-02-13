@@ -38,7 +38,8 @@ config.init({
     },
     globals: {
       jQuery: true,
-      setTimeout: true
+      setTimeout: true,
+      _: true
     }
   },
   uglify: {}

@@ -1,29 +1,38 @@
-/*! $.whenSet - v1.0.0 - 2/11/2012
+/*! $.whenSet - v1.0.0 - 2/12/2012
 * https://github.com/danheberden/jquery-whenSet
 * Copyright (c) 2012 Dan Heberden; Licensed MIT */
 
-(function($){
-  $.whenSet = function(){
+(function( window ){
+  var lib = window.jQuery || window._;
+  if ( !lib.when ) {
+    throw new Error( "jQuery or underscore.Deferred missing" );
+  }
+  lib.whenSet = function(){
     var args = [].slice.call( arguments ),
-        promise = $.when.apply( this, args );
+        promise = lib.when.apply( this, args );
 
     // place the original args onto the set ( [0] => a, [1] => b, etc )
-    $.extend( promise, args );
+    lib.extend( promise, args );
 
     // add the length property
     promise.length = args.length;
 
     // add a looping function for the typical promise fn's
     // making doneEach, failEach, alwaysEach, etc
-    $.each( ["done", "fail", "always", "pipe"], function( i, f ){
-        promise[ f + 'Each' ] = function ( callback ){
-            $.each( args, function( h, arg ){
-                $.when( arg )[ f ]( callback );
-            });
-            return promise;
-        };
-    });
-    return promise;
-  };
-}(jQuery));
+    lib.each( ["done", "fail", "always", "pipe"], function( a, b ){
+      // jQ and _ flip the args, so get the non-numeric one.
+      var fn = +a + 1 ? b : a;
+      promise[ fn + 'Each' ] = function ( callback ){
+          for ( var i = 0; i < args.length; i++ ) {
+            // make a new dfd with when for the one arg
+            // with the right fn called
+            lib.when( args[i] )[ fn ]( callback );
+          }
+          return promise;
+      };
+     });
+
+     return promise;
+   };
+}(this));
 

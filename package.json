@@ -2,7 +2,7 @@
   "name": "jquery-whenSet",
   "title": "$.whenSet",
   "description": "Create a deferred for all arguments independently and exposes iterative methods, such as doneEach and failEach as well as a deferred for all objects as a set.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/danheberden/jquery-whenSet",
   "author": {
     "name": "Dan Heberden",

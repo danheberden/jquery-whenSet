@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>$.whenSet Test Suite</title>
-  <!-- Load local jQuery, removing access to $ (use jQuery, not $). -->
+
+  <!-- load underscore, plugin and whenSet (which will get put on _) -->
+  <script src="../libs/underscore/underscore.js"></script>
+  <script src="../libs/underscore.Deferred/lib/underscore.deferred.js"></script>
+  <script src="../src/jquery-whenSet.js"></script>
+  <!-- Load local jQuery, removing access to $ (use jQuery, not $). and load whenSet again -->
   <script src="../libs/jquery/jquery.js"></script>
+  <script src="../src/jquery-whenSet.js"></script>
   <script>jQuery.noConflict()</script>
   <!-- Load local QUnit (grunt requires v1.0.0 or newer). -->
   <link rel="stylesheet" href="../libs/qunit/qunit.css" media="screen">
   <script src="../libs/qunit/qunit.js"></script>
   <!-- Load local lib and tests. -->
   <script src="jquery-whenSet_test.js"></script>
-  <script src="../src/jquery-whenSet.js"></script>
 </head>
 <body>
   <h1 id="qunit-header">$.whenSet Test Suite</h1>
