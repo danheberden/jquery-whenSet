@@ -1,0 +1,31 @@
+{
+  "name": "whenSet",
+  "title": "a jQuery and Underscore Deferred Plugin",
+  "description": "Create a deferred for all arguments individually as well as a deferred for all arguments",
+  "version": "1.1.1",
+  "homepage": "https://github.com/danheberden/jquery-whenSet",
+  "author": {
+    "name": "Dan Heberden",
+    "email": "danheberden@gmail.com",
+    "url": "http://danheberden.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danheberden/jquery-whenSet.git"
+  },
+  "bugs": "https://github.com/danheberden/jquery-whenSet/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/danheberden/jquery-whenSet/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">= 1.6.2"
+  },
+  "keywords": [
+    "deferred",
+    "when",
+    "promise"
+  ]
+}
